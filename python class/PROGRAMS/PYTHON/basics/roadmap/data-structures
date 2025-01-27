@@ -1,0 +1,193 @@
+
+# Data structures are essential for organizing and storing data efficiently in programming. Python provides several built-in data structures, each serving different purposes. 
+    
+
+
+
+
+
+# 1. Lists
+# Lists are ordered, mutable collections of items.
+
+
+# Creating a list
+fruits = ["apple", "banana", "cherry"]
+print(fruits)  # Output: ['apple', 'banana', 'cherry']
+
+# Accessing elements
+print(fruits[1])  # Output: 'banana'
+# specifies the index of  the specific item in the list that we want to output
+
+
+
+# Adding an element
+fruits.append("date")
+print(fruits)  # Output: ['apple', 'banana', 'cherry', 'date']
+# trake note that we use the  APPEND  to  add onto  tthe list a nneew w itteem
+
+
+
+
+# Removing an element
+fruits.remove("banana")
+print(fruits)  # Output: ['apple', 'cherry', 'date']
+# we just usse remove
+
+
+# USES OF LISTS
+# In Python, lists are incredibly versatile and are used for a variety of purposes. Here are some common uses:
+
+# 1. Storing Collections of Data
+# Lists allow you to store multiple items in a single variable. This is useful for keeping related data together.
+# 2. Dynamic Arrays
+# Lists in Python are dynamic, meaning you can add, remove, or change items without declaring the size of the list beforehand.
+# 3. Iteration
+# You can iterate over the elements of a list using loops, which is useful for processing or analyzing data.
+# 4. Data Processing
+# # Lists can be used to process and manipulate data, such as filtering, sorting, and transforming data.
+# 5. Storing Heterogeneous Data
+# Lists can contain items of different types, making them flexible for various applications.
+
+# 6. Nested Lists
+# You can have lists within lists (multidimensional lists) to represent more complex data structures like matrices or tables.
+
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Accessing an element
+print(matrix[1][2])  # Output: 6
+
+# 7. Stacks and Queues
+# Lists can be used to implement data structures like stacks (LIFO) and queues (FIFO).
+
+
+# Stack
+stack = []
+stack.append(1)  # Push
+stack.append(2)
+stack.pop()  # Pop, Output: 2
+
+# Queue
+from collections import deque
+queue = deque()
+queue.append(1)  # Enqueue
+queue.append(2)
+queue.popleft() # Dequeue, Output:
+
+
+
+
+# 2. TUPLES
+# Tuples are ordered, (immutable) collections of items. UNCHANGABLE
+
+
+# Creating a tuple
+coordinates = (10.0, 20.0)
+print(coordinates)  # Output: (10.0, 20.0)
+
+# Accessing elements
+print(coordinates[0])  # Output: 10.0
+# jusst as beffore  we prrintt here  the outtput  of thhe partiuular iteemm inn tthhis index
+
+
+# Tuples are immutable, so you cannot change them
+# coordinates[0] = 15.0  # This will raise an error
+
+
+
+
+
+
+# 3. Dictionaries
+# Dictionaries are unordered collections of key-value pairs.
+
+# Creating a dictionary
+student = {"name": "Alice", "age": 24, "courses": ["Math", "Science"]}
+print(student)  # Output: {'name': 'Alice', 'age': 24, 'courses': ['Math', 'Science']}
+
+# Accessing values
+print(student["name"])  # Output: 'Alice'
+
+# Adding a key-value pair
+student["grade"] = "A"
+print(student)  # Output: {'name': 'Alice', 'age': 24, 'courses': ['Math', 'Science'], 'grade': 'A'}
+
+# Removing a key-value pair
+del student["age"]
+print(student)  # Output: {'name': 'Alice', 'courses': ['Math', 'Science'], 'grade': 'A'}
+
+
+
+
+# 4. Sets
+# Sets are unordered collections of unique items.
+
+
+# Creating a set
+colors = {"red", "green", "blue"}
+print(colors)  # Output: {'red', 'green', 'blue'}
+
+# Adding an element
+colors.add("yellow")
+print(colors)  # Output: {'red', 'green', 'blue', 'yellow'}
+
+# Removing an element
+colors.discard("blue")
+print(colors)  # Output: {'red', 'green', 'yellow'}
+
+# Set operations
+another_set = {"green", "yellow", "pink",'BLACK'}
+print(colors.union(another_set))  # Output: {'red', 'green', 'yellow', 'pink'}
+# UNION  works like the sets we used to do in descrete mathermatics azn  UNION means y7ou print outb all elements appearing in both instances that have been called
+# intersection on the other hand is used when you want to print out the item that appears in both of the sets calle upon
+print(colors.intersection(another_set))  # Output: {'green', 'yellow'}
+# here green and yelow appear in both sets
+
+
+
+
+
+# 5. Stacks
+# Stacks are Last-In-First-Out (LIFO) structures.
+
+
+# Using a list as a stack
+stack = []
+stack.append(1)
+stack.append(2)
+stack.append(3)
+print(stack)  # Output: [1, 2, 3]
+
+# Removing the top element
+top_element = stack.pop()
+print(top_element)  # Output: 3 PRINTS THE TOP ELEMENT WHICH IS  nthe one that has been added the last onto the stack
+print(stack)  # Output: [1, 2]
+# now this is how the stack looks like
+
+
+
+# 6. Queues
+# Queues are First-In-First-Out (FIFO) structures.
+
+
+from collections import deque
+
+# Using deque as a queue
+queue = deque()
+queue.append(1)
+queue.append(2)
+queue.append(3)
+print(queue)  # Output: deque([1, 2, 3])
+
+# Removing the front element
+front_element = queue.popleft()
+print(front_element)  # Output: 1
+print(queue)  # Output: deque([2, 3])
+# These examples cover the most commonly used data structures in Python. Each serves a unique purpose and is suited for different scenarios. By mastering these, you'll be well-equipped to handle various programming challenges. 
+
+
+
